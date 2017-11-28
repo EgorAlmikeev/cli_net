@@ -32,7 +32,7 @@ public class PrintNetInterfaces
                     case "--list" : showNetList(); break;
                     case "-l" : showNetList(); break;
                     case "--version" : System.out.println("version 0.0.0"); break;
-                    default : System.out.println(help); break;
+                    default : System.out.println(help);
                 }
                 break;
             }
@@ -96,9 +96,9 @@ public class PrintNetInterfaces
         System.out.println("Hardware address : " + Arrays.toString(net_int.getHardwareAddress()));
 
         List<InterfaceAddress> interfaceAddresses = net_int.getInterfaceAddresses();
-        for (InterfaceAddress addr : interfaceAddresses)
+        for (InterfaceAddress i : interfaceAddresses)
         {
-            System.out.println("InterfaceAddress (Ipv4/Ipv6) : " + addr.getAddress());
+            System.out.println("InterfaceAddress (Ipv4/Ipv6) : " + i.getAddress());
         }
 
         System.out.println("Virtual : " + net_int.isVirtual());
